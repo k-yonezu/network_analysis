@@ -46,7 +46,7 @@ if __name__ == '__main__':
     # 人気動画取得
     search_response = get_popular_videos()
     # 関連動画取得
-    edge_list = get_related_videos(search_response, edge_list, m=7, dep=2)
+    edge_list = get_related_videos(search_response, edge_list, m=10, dep=2)
 
     # 重複削除
     edge_list = list(map(list, set(map(tuple, edge_list))))

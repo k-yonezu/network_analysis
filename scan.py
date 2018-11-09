@@ -21,8 +21,6 @@ def scan(G, node, eps, mu, arr):
     if node in set_flag:
         return arr
 
-    print(arr)
-
     # flagを追加
     set_flag.add(node)
 
@@ -69,8 +67,6 @@ def culc_ssmi(G, u, v):
 
 
 def add_com_num(G, com_list):
-    print(com_list)
-
     com_num = 2
     dic_com_num = {}
     for com in com_list:
@@ -84,7 +80,7 @@ def add_com_num(G, com_list):
 
     dic_sort = {}
     for name in G.nodes():
-        if dic_com_num[name]:
+        if dic_com_num[name] != 0:
             dic_sort[name] = dic_com_num[name]
         else:
             # ハブと外れ値計算
