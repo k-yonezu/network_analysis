@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Form
+	================================================== -->
+	<div class="form">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="lead">
+						チャンネル名を入力してください
+					</p>
+					<form action="/post" method="post" class="form-inline">
+						<label for="ch_name">チャンネル名</label>
+						<input type="text" class="form-control" id="ch_name" name="ch_name" placeholder="AHATO">
+						<button type="submit" class="btn btn-default">送信する</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}

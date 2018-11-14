@@ -52,7 +52,7 @@ if __name__ == '__main__':
     edge_list = list(map(list, set(map(tuple, edge_list))))
     print(edge_list)
 
-    f = open('list.txt', 'w')
+    f = open('../data/edge_list.txt', 'w')
     for list in edge_list:
         s = ' , '.join(list)
         f.write(s + "\n")
