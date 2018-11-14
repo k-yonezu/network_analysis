@@ -5,7 +5,7 @@ from scan import scan_communities
 
 if __name__ == '__main__':
     # read edge list
-    G = nx.read_edgelist("../data/edge_list.txt", delimiter=' , ')
+    G = nx.read_edgelist("data/edge_list.txt", delimiter=' , ')
     # G = nx.read_edgelist("test_edge_list.txt")
 
     # クラスタを記述した配列を作成
