@@ -28,8 +28,10 @@ python script/network_graph.py
 python server.py
 ```
 http://localhost:5000/personalized_pagerank/{チャンネル名}
+
 例）
 http://localhost:5000/personalized_pagerank/兄者弟者
+
 のようにgetでリクエストを送ると、そのチャンネルに対して影響力の高いチャンネル上位３個をPageRankとともに返す。
 
 ② 上記WebAPIを使ったWebアプリケーション
@@ -38,5 +40,6 @@ http://localhost:5000/personalized_pagerank/兄者弟者
 python server.py
 ```
 http://localhost:5000/
+
 ブラウザで上記URLにアクセスし、フォームにチャンネル名を入力すると、そのチャンネル名をクエリとして与えて①のAPIを叩く。
 帰ってきた値をページに表示する。
