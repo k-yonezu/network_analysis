@@ -1,7 +1,10 @@
 # 課題４
 data/ 取得したエッジリストを保存
+
 script/ データの収集、分析、可視化のためのpythonのファイル
+
 static/ bootstrapのファイル
+
 templetes/ htmlファイル
 
 .envファイルにYOUTUBE_API_KEYを設定する。
