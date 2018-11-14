@@ -23,7 +23,8 @@ def post():
         ch_name = request.form['ch_name']
         url = 'http://localhost:5000/personalized_pagerank/{ch_name}'.format(ch_name=ch_name)
         response = requests.get(url)
-        return response.text
+        d = json.loads(response.text)
+        return render_template('index.html', d=d, ch_name=ch_name)
     else:
         # エラーなどでリダイレクトしたい場合はこんな感じで
         return redirect(url_for('index'))
@@ -33,7 +34,10 @@ def post():
 def personalized_pagerank(ch_name=None):
     G = nx.read_edgelist("data/edge_list.txt", delimiter=' , ')
     pr = nx.pagerank(G, personalization={ch_name: 1})
-    res = json.dumps(sorted(pr.items(), key=lambda x: -x[1])[:9], ensure_ascii=False)
+    # 自分は除外
+    del pr[ch_name]
+    # ソートしてjsonにエンコード
+    res = json.dumps(sorted(pr.items(), key=lambda x: -x[1])[:3], ensure_ascii=False)
     return res
 
 

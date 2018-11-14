@@ -18,4 +18,13 @@
 			</div>
 		</div>
 	</div>
-	{% endblock %}
+	{% if d %}
+	<div class="container">
+		<p class="lead">おすすめのチャンネル</p>
+		{% for n, v in d%}
+			<p>{{ n }}</p>
+			<p>{{ v }}</p>
+		{% endfor%}
+	</div>
+	{% endif %}
+{% endblock %}
