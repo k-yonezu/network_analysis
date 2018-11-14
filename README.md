@@ -22,7 +22,8 @@ python script/network_graph.py
 ```
 
 ## 課題4.3 自作WebAPIの作成とWebアプリケーションの構築
-① Personalized PageRankを実行するWebAPI
+**① Personalized PageRankを実行するWebAPI**
+
 下記コマンドを実行する。
 ```
 python server.py
@@ -34,7 +35,8 @@ http://localhost:5000/personalized_pagerank/兄者弟者
 
 のようにgetでリクエストを送ると、そのチャンネルに対して影響力の高いチャンネル上位３個をPageRankとともに返す。
 
-② 上記WebAPIを使ったWebアプリケーション
+**② 上記WebAPIを使ったWebアプリケーション**
+
 下記コマンドを実行する。
 ```
 python server.py
