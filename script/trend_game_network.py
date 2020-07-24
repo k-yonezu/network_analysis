@@ -8,7 +8,7 @@ def get_popular_videos():
         chart='mostPopular',
         regionCode='JP',
         videoCategoryId='20',
-        maxResults='20',
+        maxResults='5',
     ).execute()
 
 
@@ -24,14 +24,14 @@ def get_related_videos(res, edge_list, dep=1, m=5, first_flag=True):
 
         for i in search_response['items']:
             tmp = []
-            if(item['snippet']['channelTitle'] != i['snippet']['channelTitle']):
-                tmp.append(item['snippet']['channelTitle'])
-                tmp.append(i['snippet']['channelTitle'])
+            if(item['snippet']['channelId'] != i['snippet']['channelId']):
+                tmp.append(item['snippet']['channelId'])
+                tmp.append(i['snippet']['channelId'])
                 edge_list.append(tmp)
 
         # depが１より大きければ再帰処理
         if(dep > 1):
-            edge_list = get_related_videos(search_response, edge_list, dep=dep - 1, first_flag=False)
+            edge_list.extend(get_related_videos(search_response, edge_list, dep=dep - 1, first_flag=False))
 
     return edge_list
 

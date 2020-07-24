@@ -9,7 +9,7 @@ def scan_communities(G, eps, mu):
         result.append(set({u}))
 
     # 各ノードに対する処理
-    for u in G.node():
+    for u in G.nodes():
         result = scan(G, u, eps, mu, result)
 
     return [x for x in result if x]
