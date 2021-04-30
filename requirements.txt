@@ -170,7 +170,7 @@ QtPy==1.9.0
 regex @ file:///opt/concourse/worker/volumes/live/5c3450d5-f152-477e-507e-094a7be51d80/volume/regex_1593435586246/work
 requests @ file:///tmp/build/80754af9/requests_1592841827918/work
 rope==0.17.0
-rsa==4.6
+rsa==4.7
 Rtree==0.9.4
 ruamel-yaml==0.15.87
 scikit-image==0.16.2
